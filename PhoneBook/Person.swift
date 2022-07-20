@@ -17,21 +17,6 @@ struct Person {
     var fullName: String {
         "\(fistName) \(lastName)"
     }
-    
-    static func getPerson() -> [Person] {
-        var persons: [Person] = []
-        for _ in 1...5 {
-            persons.append(
-                Person(
-                    fistName: DataStore.getDetailedInfo().fistNameList.randomElement() ?? "Oops!",
-                    lastName: DataStore.getDetailedInfo().lastNameList.randomElement() ?? "Oops!",
-                    email: DataStore.getDetailedInfo().email.randomElement() ?? "exsample@mail.com",
-                    phone: DataStore.getDetailedInfo().phoneNumber.randomElement() ?? "-- -- --"
-                )
-            )
-        }
-        return persons
-    }
 }
 
 class DataStore {
@@ -49,12 +34,36 @@ class DataStore {
     
     static func getDetailedInfo() -> DataStore {
         let data = DataStore(
-            fistNameList: ["Denis", "Ivan", "Alexsander", "Anna", "Nastay"],
+            fistNameList: ["Denis", "Ivan", "Alexsander", "Andrey", "Roman"],
             lastNameList: ["Sidorov", "Petrov", "Ivanov", "Kurpenko", "Kaz"],
             email: ["sid@inbox.ru", "kir@live.com", "alex@mail.ru", "faz@outlook.com", "kurp@yandex.ry"],
             phoneNumber: ["13-33-54", "11-43-54", "53-98-77", "8 900-333-8901", "12-13-90"]
         )
         return data
+    }
+}
+
+
+extension Person: Hashable {
+    static func getPerson() -> [Person] {
+        var persons: Set<Person> = []
+        var resultPersons: [Person] = []
+        for _ in 1...5 {
+            persons.insert(
+                Person(
+                    fistName: DataStore.getDetailedInfo().fistNameList.randomElement() ?? "Oops!",
+                    lastName: DataStore.getDetailedInfo().lastNameList.randomElement() ?? "Oops!",
+                    email: DataStore.getDetailedInfo().email.randomElement() ?? "exsample@mail.com",
+                    phone: DataStore.getDetailedInfo().phoneNumber.randomElement() ?? "-- -- --"
+                )
+            )
+        }
+        for person in persons {
+            if persons.contains(person) {
+                resultPersons.append(person)
+            }
+        }
+    return resultPersons
     }
 }
 
