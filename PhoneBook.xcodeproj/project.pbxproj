@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		EF4BDACB2887F522000F5B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BDACA2887F522000F5B59 /* AppDelegate.swift */; };
 		EF4BDACD2887F522000F5B59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BDACC2887F522000F5B59 /* SceneDelegate.swift */; };
-		EF4BDACF2887F522000F5B59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BDACE2887F522000F5B59 /* ViewController.swift */; };
 		EF4BDAD22887F522000F5B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4BDAD02887F522000F5B59 /* Main.storyboard */; };
 		EF4BDAD42887F524000F5B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4BDAD32887F524000F5B59 /* Assets.xcassets */; };
 		EF4BDAD72887F524000F5B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4BDAD52887F524000F5B59 /* LaunchScreen.storyboard */; };
+		EF4BDADF2887F628000F5B59 /* PhoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BDADE2887F628000F5B59 /* PhoneListViewController.swift */; };
+		EF4BDAE12887F6C0000F5B59 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BDAE02887F6C0000F5B59 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF4BDAC72887F522000F5B59 /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4BDACA2887F522000F5B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF4BDACC2887F522000F5B59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF4BDACE2887F522000F5B59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF4BDAD12887F522000F5B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF4BDAD32887F524000F5B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF4BDAD62887F524000F5B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4BDAD82887F524000F5B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4BDADE2887F628000F5B59 /* PhoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneListViewController.swift; sourceTree = "<group>"; };
+		EF4BDAE02887F6C0000F5B59 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				EF4BDACA2887F522000F5B59 /* AppDelegate.swift */,
 				EF4BDACC2887F522000F5B59 /* SceneDelegate.swift */,
-				EF4BDACE2887F522000F5B59 /* ViewController.swift */,
 				EF4BDAD02887F522000F5B59 /* Main.storyboard */,
+				EF4BDADE2887F628000F5B59 /* PhoneListViewController.swift */,
+				EF4BDAE02887F6C0000F5B59 /* Person.swift */,
 				EF4BDAD32887F524000F5B59 /* Assets.xcassets */,
 				EF4BDAD52887F524000F5B59 /* LaunchScreen.storyboard */,
 				EF4BDAD82887F524000F5B59 /* Info.plist */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4BDACF2887F522000F5B59 /* ViewController.swift in Sources */,
+				EF4BDADF2887F628000F5B59 /* PhoneListViewController.swift in Sources */,
 				EF4BDACB2887F522000F5B59 /* AppDelegate.swift in Sources */,
+				EF4BDAE12887F6C0000F5B59 /* Person.swift in Sources */,
 				EF4BDACD2887F522000F5B59 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
