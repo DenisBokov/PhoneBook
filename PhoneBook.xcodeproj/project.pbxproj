@@ -47,6 +47,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF367DD3288E7DDC0029AD10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF4BDAD32887F524000F5B59 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EF367DD4288E7E0E0029AD10 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF4BDACA2887F522000F5B59 /* AppDelegate.swift */,
+				EF4BDAD82887F524000F5B59 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		EF367DD5288E7E260029AD10 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				EF4BDAD02887F522000F5B59 /* Main.storyboard */,
+				EF4BDAD52887F524000F5B59 /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		EF367DD6288E7E450029AD10 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF33541C288AB16000340385 /* DataStore.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		EF367DD7288E7E570029AD10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF4BDAE02887F6C0000F5B59 /* Person.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EF367DD8288E7E6C0029AD10 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF4BDACC2887F522000F5B59 /* SceneDelegate.swift */,
+				EF367DD1288E6B9C0029AD10 /* MainTabBarController.swift */,
+				EF32BF042889411A00A16DEC /* DetailsViewController.swift */,
+				EF4BDAE4288879A7000F5B59 /* PhoneFullListViewController.swift */,
+				EF4BDADE2887F628000F5B59 /* PhoneListViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		EF4BDABE2887F521000F5B59 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +120,12 @@
 		EF4BDAC92887F522000F5B59 /* PhoneBook */ = {
 			isa = PBXGroup;
 			children = (
-				EF4BDACA2887F522000F5B59 /* AppDelegate.swift */,
-				EF4BDACC2887F522000F5B59 /* SceneDelegate.swift */,
-				EF4BDAD02887F522000F5B59 /* Main.storyboard */,
-				EF367DD1288E6B9C0029AD10 /* MainTabBarController.swift */,
-				EF32BF042889411A00A16DEC /* DetailsViewController.swift */,
-				EF4BDAE4288879A7000F5B59 /* PhoneFullListViewController.swift */,
-				EF4BDADE2887F628000F5B59 /* PhoneListViewController.swift */,
-				EF4BDAE02887F6C0000F5B59 /* Person.swift */,
-				EF33541C288AB16000340385 /* DataStore.swift */,
-				EF4BDAD32887F524000F5B59 /* Assets.xcassets */,
-				EF4BDAD52887F524000F5B59 /* LaunchScreen.storyboard */,
-				EF4BDAD82887F524000F5B59 /* Info.plist */,
+				EF367DD8288E7E6C0029AD10 /* ViewControllers */,
+				EF367DD7288E7E570029AD10 /* Models */,
+				EF367DD6288E7E450029AD10 /* Services */,
+				EF367DD3288E7DDC0029AD10 /* Resources */,
+				EF367DD5288E7E260029AD10 /* StoryBoards */,
+				EF367DD4288E7E0E0029AD10 /* App */,
 			);
 			path = PhoneBook;
 			sourceTree = "<group>";
