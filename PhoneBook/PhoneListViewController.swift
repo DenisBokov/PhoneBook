@@ -9,6 +9,8 @@ import UIKit
 
 class PhoneListViewController: UITableViewController {
     
+    var persons: [Person] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
@@ -16,22 +18,23 @@ class PhoneListViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        persons.count
+        persons.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personName", for: indexPath)
         var content = cell.defaultContentConfiguration()
-//        content.text = persons[indexPath.row].fullName
+        content.text = persons[indexPath.row].fullName
         cell.contentConfiguration = content
         return cell
     }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detaisVC = segue.destination as? DetailsViewController else { return }
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-//        detaisVC.personFullInfo = persons[indexPath.row]
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detaisVC = segue.destination as? DetailsViewController else { return }
+            detaisVC.personFullInfo = persons[indexPath.row]
+        }
     }
 }
