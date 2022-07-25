@@ -9,7 +9,7 @@ import UIKit
 
 class PhoneFullListViewController: UITableViewController {
 
-    var persons = Person.getContactList()
+    var persons: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +38,9 @@ class PhoneFullListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         persons[section].fullName
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
